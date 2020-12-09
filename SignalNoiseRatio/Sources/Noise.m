@@ -1,10 +1,8 @@
 function noise = Noise(signal, signal_noise_ratio)
 % Generates a white gaussian noise (mean = 0, variance = sigma^2)
 
-number_of_points = length(signal);
-
 % Generate noise
-noise = randn(1, number_of_points);
+noise = randn(size(signal));
 noise = noise - mean(noise);
 
 % Find current signal to noise ratio
